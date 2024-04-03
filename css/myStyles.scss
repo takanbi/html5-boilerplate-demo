@@ -1,5 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$darkTextColor: #2e2e2e;
+/* Color Theme Swatches in Hex */
+$Coral-Teal-Gray-1-hex: #ff5f5d;
+$Coral-Teal-Gray-2-hex: #3f7c85;
+$Coral-Teal-Gray-3-hex: #00ccbf;
+$Coral-Teal-Gray-4-hex: #72f2eb;
+$Coral-Teal-Gray-5-hex: #747e7e;
+
+/* Color Theme Swatches in RGBA */
+$Coral-Teal-Gray-1-rgba: rgba(255, 95, 93, 1);
+$Coral-Teal-Gray-2-rgba: rgba(63, 124, 133, 1);
+$Coral-Teal-Gray-3-rgba: rgba(0, 204, 191, 1);
+$Coral-Teal-Gray-4-rgba: rgba(114, 242, 235, 1);
+$Coral-Teal-Gray-5-rgba: rgba(116, 126, 126, 1);
+
+/* Color Theme Swatches in HSLA */
+$Coral-Teal-Gray-1-hsla: hsla(0, 100, 68, 1);
+$Coral-Teal-Gray-2-hsla: hsla(187, 35, 38, 1);
+$Coral-Teal-Gray-3-hsla: hsla(176, 100, 40, 1);
+$Coral-Teal-Gray-4-hsla: hsla(176, 83, 69, 1);
+$Coral-Teal-Gray-5-hsla: hsla(180, 4, 47, 1);
+
+@font-face {
+  font-family: pirulen;
+  src: url("../fonts/pirulen\ rg.ttf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Orbitron:wght@800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+.red-hat display {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
 
 .container {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $Coral-Teal-Gray-2-hex;
+  svg {
+    width: 300px;
+    height: 300px;
+    fill: #6aab90;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    #demoBox-a {
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+    }
+  }
+
 }
+#content {
+  width: 100%;
+  position: absolute;
+  top: 6em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  h1 {
+    color: #fff;
+    font-family: pirulen;
+    font-size: 3em;
+    letter-spacing: 0.25em;
+    span {
+      display: inline-block;
+    }
+  }
+  
+}
+section.montserrat {
+  position: absolute;
+  top: 12em;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 250ms linear;
+  p {
+    width: 70%;
+    margin: 0 auto;
+    -webkit-text-stroke: 0.35px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $darkTextColor;
+    background: $Coral-Teal-Gray-1-hex;
+    padding: 4em;
+    line-height: 2.5em;
+    color: #FFF;
+    border-radius: 1em;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+  }
+}
+section.montserrat:hover {
+  transform: scale(1.2);
+} 
