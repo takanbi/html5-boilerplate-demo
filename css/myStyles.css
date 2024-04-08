@@ -31,6 +31,7 @@
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
+  opacity: 0;
 }
 
 .container {
@@ -96,4 +97,49 @@ section.montserrat p {
 
 section.montserrat:hover {
   transform: scale(1.2);
+}
+
+#container2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container2 p#one {
+  font-size: 2em;
+}
+
+#container3 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container3 p#two {
+  font-size: 2em;
+}
+
+#container4 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container4 p#three {
+  font-size: 2em;
+}
+
+#container5 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container5 p#four {
+  font-size: 2em;
+  padding: 3em;
 }/*# sourceMappingURL=myStyles.css.map */
