@@ -42,27 +42,37 @@ $(function () {
     );
   }
 
+  // function Step004() {
+  //   // gsap.set(para, {
+  //   //   autoAlpha: 0,
+  //   //   y: 300
+  //   // })
+  //   let tl = gsap.timeline({
+  //     id: "Step004",
+  //   });
+  //   tl.fromTo(
+  //     para,
+  //     { opacity: 0, y: 300 },
+  //     { y: 0, opacity: 1, duration: 2 },"+=4"
+  //   );
+  // }
+
   function Step004() {
-    // gsap.set(para, {
-    //   autoAlpha: 0,
-    //   y: 300
-    // })
+    gsap.set(para, {
+      y: 300,
+      autoAlpha: 0
+    })
     let tl = gsap.timeline({
-      id: "Step004",
-    });
-    tl.fromTo(
-      para,
-      { opacity: 0, y: 300 },
-      { y: 0, opacity: 1, duration: 2 },
-      "+=4"
-    );
+      id: "Step004"
+    })
+    tl.to(para, {autoAlpha: 1, y:0, duration: 2}, "+=4")
   }
-  function Step005() {
-    let tl = gsap.timeline({
-      id: "Step005",
-    });
-    gsap.to(para, { clearProps: true }, "-=1");
-  }
+  // function Step005() {
+  //   let tl = gsap.timeline({
+  //     id: "Step005",
+  //   });
+  //   gsap.to(para, { clearProps: true }, "+=1");
+  // }
   function Master() {
     let master = gsap.timeline();
     master
@@ -70,7 +80,7 @@ $(function () {
       .add(Step002())
       .add(Step003())
       .add(Step004())
-      .add(Step005());
+      // .add(Step005());
   }
 
   // Step004()
