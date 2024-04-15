@@ -2,6 +2,7 @@
 gsap.registerPlugin(GSDevTools);
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger);
 // gsap.registerPlugin(GSDevTools, TextPlugin, SplitText);
 // gsap.registerPlugin(GSDevTools, TextPlugin, SplitText);
 // gsap.registerPlugin(GSDevTools, TextPlugin, SplitText);
@@ -11,7 +12,9 @@ $(function () {
   let demoBox = document.getElementById("demoBox");
   let titleSpans = document.querySelectorAll("#content > h1 > span");
   let para = document.querySelector("section.montserrat");
-  console.log(para);
+  let sect6 = document.getElementById("section6");
+  let section6Divs = document.querySelectorAll(".section-6Divs");
+  console.log(section6Divs);
   function Step001() {
     let tl = gsap.timeline({
       id: "Step001",
@@ -73,6 +76,22 @@ $(function () {
   //   });
   //   gsap.to(para, { clearProps: true }, "+=1");
   // }
+
+  function Step006() {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sect6,
+        marker: true,
+        markers: {startColor: "red", endColor: "green", fontSize: "18px", fontWeight: "bold", indent: 20},
+        start: "top 300px",
+        end: "bottom 600px",
+        ease: "power1.inOut",
+        // pin: true,
+        scrub: 1
+      }
+    })
+    tl.fromTo(section6Divs, {y: 200, opacity: 0}, {y: 0, opacity: 1, duration: 3, stagger: 0.6})
+  }
   function Master() {
     let master = gsap.timeline();
     master
@@ -81,6 +100,7 @@ $(function () {
       .add(Step003())
       .add(Step004())
       // .add(Step005());
+      .add(Step006())
   }
 
   // Step004()

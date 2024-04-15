@@ -159,3 +159,33 @@ section.montserrat {
     padding: 3em;
   }
 }
+
+#container6 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #section6 {
+    width: 70%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    .section-6Divs {
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      border-radius: 1em;
+      box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+      transition: all 200ms linear;
+      cursor: pointer;
+    }
+    .section-6Divs:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+#container7 {
+  width: 100%;
+  height: 100vh;
+}
